@@ -22,6 +22,7 @@ export const UserStorage = ({ children }) => {
           await getUser(token);
         }
       } catch (e) {
+        userLogout();
       } finally {
         setLoading(false);
       }

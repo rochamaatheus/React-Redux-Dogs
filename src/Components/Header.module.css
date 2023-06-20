@@ -7,3 +7,9 @@
   background: white;
   top: 0px;
 }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

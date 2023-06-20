@@ -1,5 +1,5 @@
 import React from 'react';
-import { TOKEN_POST, USER_GET } from './api';
+import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from './api';
 
 export const UserContext = React.createContext();
 
@@ -12,6 +12,19 @@ export const UserStorage = ({ children }) => {
   React.useEffect(() => {
     async function autoLogin() {
       const token = window.localStorage.getItem('token');
+      try {
+        if (token) {
+          setError(null);
+          setLogin(true);
+          const { url, options } = TOKEN_VALIDATE_POST(token);
+          const response = await fetch(url, options);
+          if (!response.ok) throw new Error('TOKEN INVÁLIDO');
+          await getUser(token);
+        }
+      } catch (e) {
+      } finally {
+        setLoading(false);
+      }
     }
     autoLogin();
   }, []);
@@ -32,8 +45,16 @@ export const UserStorage = ({ children }) => {
     getUser(token);
   }
 
+  async function userLogout() {
+    setData(null);
+    setError(null);
+    setLoading(false);
+    setLogin(null);
+    window.localStorage.removeItem('token');
+  }
+
   return (
-    <UserContext.Provider value={{ userLogin, data }}>
+    <UserContext.Provider value={{ userLogin, userLogout, data }}>
       {children}
     </UserContext.Provider>
   );

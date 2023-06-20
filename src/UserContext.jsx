@@ -11,26 +11,14 @@ export const UserStorage = ({ children }) => {
   const [error, setError] = React.useState(null);
   const navigate = useNavigate();
 
-  React.useEffect(() => {
-    async function autoLogin() {
-      const token = window.localStorage.getItem('token');
-      try {
-        if (token) {
-          setError(null);
-          setLogin(true);
-          const { url, options } = TOKEN_VALIDATE_POST(token);
-          const response = await fetch(url, options);
-          if (!response.ok) throw new Error('TOKEN INVÁLIDO');
-          await getUser(token);
-        }
-      } catch (e) {
-        userLogout();
-      } finally {
-        setLoading(false);
-      }
-    }
-    autoLogin();
-  }, [navigate, userLogout]);
+  const userLogout = React.useCallback(async () => {
+    setData(null);
+    setError(null);
+    setLoading(false);
+    setLogin(null);
+    window.localStorage.removeItem('token');
+    navigate('/login');
+  }, [navigate]);
 
   async function getUser(token) {
     const { url, options } = USER_GET(token);
@@ -59,15 +47,26 @@ export const UserStorage = ({ children }) => {
     }
   }
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  async function userLogout() {
-    setData(null);
-    setError(null);
-    setLoading(false);
-    setLogin(null);
-    window.localStorage.removeItem('token');
-    navigate('/login');
-  }
+  React.useEffect(() => {
+    async function autoLogin() {
+      const token = window.localStorage.getItem('token');
+      try {
+        if (token) {
+          setError(null);
+          setLogin(true);
+          const { url, options } = TOKEN_VALIDATE_POST(token);
+          const response = await fetch(url, options);
+          if (!response.ok) throw new Error('TOKEN INVÁLIDO');
+          await getUser(token);
+        }
+      } catch (e) {
+        userLogout();
+      } finally {
+        setLoading(false);
+      }
+    }
+    autoLogin();
+  }, [userLogout]);
 
   return (
     <UserContext.Provider

@@ -1,5 +1,6 @@
 import React from 'react';
 import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from './api';
+import { useNavigate } from 'react-router-dom';
 
 export const UserContext = React.createContext();
 
@@ -8,6 +9,7 @@ export const UserStorage = ({ children }) => {
   const [login, setLogin] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState(null);
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     async function autoLogin() {
@@ -28,7 +30,7 @@ export const UserStorage = ({ children }) => {
       }
     }
     autoLogin();
-  }, []);
+  }, [navigate, userLogout]);
 
   async function getUser(token) {
     const { url, options } = USER_GET(token);
@@ -48,6 +50,7 @@ export const UserStorage = ({ children }) => {
       const { token } = await tokenRes.json();
       window.localStorage.setItem('token', token);
       await getUser(token);
+      navigate('/conta');
     } catch (e) {
       setError(e.message);
       setLogin(false);
@@ -56,12 +59,14 @@ export const UserStorage = ({ children }) => {
     }
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   async function userLogout() {
     setData(null);
     setError(null);
     setLoading(false);
     setLogin(null);
     window.localStorage.removeItem('token');
+    navigate('/login');
   }
 
   return (

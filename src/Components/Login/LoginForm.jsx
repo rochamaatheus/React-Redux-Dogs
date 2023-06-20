@@ -29,7 +29,7 @@ const LoginForm = () => {
       <form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" />
         <Input label="Senha" type="password" name="password" />
-        <Button />
+        <Button>Entrar</Button>
       </form>
       <Link to="/login/criar">Cadastro</Link>
       <Link to="/login/perdeu">Perdeu</Link>

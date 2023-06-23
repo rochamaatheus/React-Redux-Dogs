@@ -5,7 +5,8 @@
 }
 
 .nav a,
-.nav button {
+.nav button,
+.mobileButton {
   background: #eee;
   border-radius: 0.2rem;
   height: 40px;
@@ -35,4 +36,8 @@
 
 .nav a:global(.active) svg > * {
   fill: #fb1;
+}
+
+.mobileButton {
+  padding: 0;
 }

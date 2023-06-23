@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './UserPhotoPost.module.css';
+import Input from '../Forms/Input';
+import Button from '../Forms/Button';
 
 const UserPhotoPost = () => {
   function handleSubmit(event) {
@@ -8,7 +10,13 @@ const UserPhotoPost = () => {
 
   return (
     <section className={`${styles.photoPost} animeLeft`}>
-      <form onSubmit={handleSubmit}></form>
+      <form onSubmit={handleSubmit}>
+        <Input label="Nome" type="text" name="nome" />
+        <Input label="Peso" type="text" name="peso" />
+        <Input label="Idade" type="number" name="idade" />
+        <input type="file" name="img" id="img" />
+        <Button>Enviar</Button>
+      </form>
     </section>
   );
 };

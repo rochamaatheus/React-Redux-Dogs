@@ -82,3 +82,15 @@
   transform: translateX(-10px);
   opacity: 1;
 }
+
+.navMobile a,
+.navMobile button {
+  display: flex;
+  align-items: center;
+  background: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding: 0.5rem 0;
+  cursor: pointer;
+}

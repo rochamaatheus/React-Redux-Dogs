@@ -11,7 +11,7 @@ const UserHeaderNav = () => {
   const { userLogout } = React.useContext(UserContext);
 
   return (
-    <nav>
+    <nav className={styles.nav}>
       <NavLink to="/conta">
         <MinhasFotos /> Minhas Fotos
       </NavLink>

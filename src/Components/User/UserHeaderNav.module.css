@@ -17,3 +17,12 @@
   transition: 0.1s;
   cursor: pointer;
 }
+
+.nav a:hover,
+.nav a:focus,
+.nav button:hover .nav button:focus {
+  background: #fff;
+  box-shadow: 0 0 0 3px #eee;
+  border-color: #333;
+  outline: none;
+}

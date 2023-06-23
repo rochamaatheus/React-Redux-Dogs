@@ -95,6 +95,10 @@
   cursor: pointer;
 }
 
+.navMobile button {
+  border-bottom: none;
+}
+
 .navMobile svg {
   margin-right: 0.5rem;
 }

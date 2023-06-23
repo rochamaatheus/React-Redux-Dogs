@@ -1,7 +1,7 @@
 import React from 'react';
 
 const UserHeaderNav = () => {
-  return <div>UserHeaderNav</div>;
+  return <nav>UserHeaderNav</nav>;
 };
 
 export default UserHeaderNav;

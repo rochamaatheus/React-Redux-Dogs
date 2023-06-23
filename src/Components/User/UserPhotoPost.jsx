@@ -16,7 +16,11 @@ const UserPhotoPost = () => {
     event.preventDefault();
   }
 
-  function handleImgChange() {}
+  function handleImgChange({ target }) {
+    setImg({
+      raw: target.files[0],
+    });
+  }
 
   return (
     <section className={`${styles.photoPost} animeLeft`}>

@@ -4,3 +4,7 @@
   gap: 2rem;
   margin-bottom: 2rem;
 }
+
+.photoPost #img {
+  margin-bottom: 1rem;
+}

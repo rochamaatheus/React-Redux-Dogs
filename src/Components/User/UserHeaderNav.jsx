@@ -30,7 +30,11 @@ const UserHeaderNav = () => {
           onClick={() => setMobileMenu(!mobileMenu)}
         ></button>
       )}
-      <nav className={styles.nav}>
+      <nav
+        className={`${mobile ? styles.navMobile : styles.nav} ${
+          mobileMenu && styles.navMobileActive
+        }`}
+      >
         <NavLink to="/conta" end>
           <MinhasFotos /> {mobile && 'Minhas Fotos'}
         </NavLink>

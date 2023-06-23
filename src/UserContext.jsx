@@ -50,19 +50,21 @@ export const UserStorage = ({ children }) => {
   React.useEffect(() => {
     async function autoLogin() {
       const token = window.localStorage.getItem('token');
-      try {
-        if (token) {
+      if (token) {
+        try {
           setError(null);
           setLogin(true);
           const { url, options } = TOKEN_VALIDATE_POST(token);
           const response = await fetch(url, options);
           if (!response.ok) throw new Error('TOKEN INVÁLIDO');
           await getUser(token);
+        } catch (e) {
+          userLogout();
+        } finally {
+          setLoading(false);
         }
-      } catch (e) {
-        userLogout();
-      } finally {
-        setLoading(false);
+      } else {
+        setLogin(false);
       }
     }
     autoLogin();

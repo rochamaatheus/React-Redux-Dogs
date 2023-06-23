@@ -94,3 +94,7 @@
   padding: 0.5rem 0;
   cursor: pointer;
 }
+
+.navMobile svg {
+  margin-right: 0.5rem;
+}

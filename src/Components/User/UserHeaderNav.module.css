@@ -41,3 +41,13 @@
 .mobileButton {
   padding: 0;
 }
+
+.mobileButton::after {
+  content: '';
+  display: block;
+  width: 1.2rem;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 2px;
+  box-shadow: 0 6px currentColor, 0 -6px currentColor;
+}

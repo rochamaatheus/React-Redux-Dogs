@@ -5,7 +5,7 @@ import { Navigate } from 'react-router-dom';
 const ProtectedRoute = ({ children }) => {
   const { login } = React.useContext(UserContext);
 
-  return login ? <div>Verdadeiro</div> : <Navigate to="/login" />;
+  return login ? children : <Navigate to="/login" />;
 };
 
 export default ProtectedRoute;

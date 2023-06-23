@@ -8,6 +8,7 @@ const UserPhotoPost = () => {
   const nome = useForm();
   const peso = useForm('number');
   const idade = useForm('number');
+  const [img, setImg] = React.useState({});
 
   function handleSubmit(event) {
     event.preventDefault();

@@ -15,10 +15,8 @@ const UserHeader = () => {
       case '/conta/estatisticas':
         setTitle('Estatísticas');
         break;
-      case '/conta/postar':
-        setTitle('Adicionar Foto');
-        break;
       default:
+        setTitle('Adicionar Foto');
         break;
     }
   }, [location]);

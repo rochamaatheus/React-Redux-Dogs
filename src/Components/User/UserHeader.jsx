@@ -4,7 +4,7 @@ import styles from './UserHeader.module.css';
 
 const UserHeader = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <h1 className="title">Título</h1>
       <UserHeaderNav />
     </header>

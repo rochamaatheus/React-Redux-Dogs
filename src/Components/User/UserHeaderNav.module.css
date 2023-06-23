@@ -95,6 +95,11 @@
   cursor: pointer;
 }
 
+.navMobile a:hover svg > *,
+.navMobile button:hover svg > * {
+  fill: #fb1;
+}
+
 .navMobile button {
   border-bottom: none;
 }

@@ -51,3 +51,12 @@
   border-radius: 2px;
   box-shadow: 0 6px currentColor, 0 -6px currentColor;
 }
+
+.mobileButton:focus,
+.mobileButton:hover {
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 0 3px #fea;
+  border-color: #fb1;
+  color: #fb1;
+}

@@ -29,6 +29,7 @@ const UserPhotoPost = () => {
 
   function handleImgChange({ target }) {
     setImg({
+      preview: URL.createObjectURL(target.files[0]),
       raw: target.files[0],
     });
   }
@@ -42,6 +43,14 @@ const UserPhotoPost = () => {
         <input type="file" name="img" id="img" onChange={handleImgChange} />
         <Button>Enviar</Button>
       </form>
+      <div>
+        {img.preview && (
+          <div
+            className={styles.preview}
+            style={{ backgroundImage: `url(${img.preview})` }}
+          ></div>
+        )}
+      </div>
     </section>
   );
 };

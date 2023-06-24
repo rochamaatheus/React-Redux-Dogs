@@ -21,7 +21,7 @@ const FeedPhotos = () => {
   if (loading) return <Loading />;
   if (data)
     return (
-      <ul>
+      <ul className={`${styles.feed} animeLeft`}>
         {data.map((photo) => (
           <FeedPhotosItem key={photo.id} photo={photo} />
         ))}

@@ -3,7 +3,7 @@ import styles from './FeedPhotosItem.module.css';
 
 const FeedPhotosItem = ({ photo }) => {
   return (
-    <li>
+    <li className={styles.photo}>
       <img src={photo.src} alt={photo.title} />
       <span>{photo.acessos}</span>
     </li>

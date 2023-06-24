@@ -16,6 +16,7 @@ const FeedPhotos = () => {
   }, [request]);
 
   if (error) return <Error error={error} />;
+  if (loading) return <Loading />;
   return (
     <div>
       <FeedPhotosItem />

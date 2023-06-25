@@ -1,7 +1,16 @@
 import React from 'react';
 
-const PhotoCommentsForm = () => {
-  return <div>PhotoCommentsForm</div>;
+const PhotoCommentsForm = ({ id }) => {
+  const [comment, setComment] = React.useState('');
+
+  return (
+    <form>
+      <textarea
+        value={comment}
+        onChange={({ target }) => setComment(target.value)}
+      />
+    </form>
+  );
 };
 
 export default PhotoCommentsForm;

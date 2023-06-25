@@ -8,7 +8,7 @@ const PhotoComments = (props) => {
   const [comments, setComments] = React.useState(() => props.comments);
 
   return (
-    <div>
+    <>
       <ul className={styles.comment}>
         {comments.map((comment) => (
           <li key={comment.comment_ID}>
@@ -18,7 +18,7 @@ const PhotoComments = (props) => {
         ))}
       </ul>
       {login && <PhotoCommentsForm id={props.id} />}
-    </div>
+    </>
   );
 };
 

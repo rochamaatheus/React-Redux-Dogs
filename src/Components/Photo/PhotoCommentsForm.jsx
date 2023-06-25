@@ -7,10 +7,12 @@ const PhotoCommentsForm = ({ id }) => {
   const [comment, setComment] = React.useState('');
   const { request, error } = useFetch();
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    const { url, options } = COMMENT_POST(id, { comment });
-    request(url, options);
+    const token = window.localStorage.getItem('token');
+    if (!token) return;
+    const { url, options } = COMMENT_POST(id, { comment }, token);
+    await request(url, options);
   }
 
   return (

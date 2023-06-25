@@ -76,3 +76,15 @@
 .attributes li {
   margin-right: 2rem;
 }
+
+.attributes li::before {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  margin-right: 0.5rem;
+  position: relative;
+  top: 3px;
+  width: 2px;
+  background: #333;
+  margin-top: 5px;
+}

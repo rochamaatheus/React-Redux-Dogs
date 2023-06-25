@@ -4,25 +4,25 @@ import { Link } from 'react-router-dom';
 
 const PhotoContent = ({ data }) => {
   const { photo, comments } = data;
+  const { src, title, author, id, peso, idade } = photo;
 
   return (
     <div className={styles.photo}>
       <div className={styles.img}>
-        <img src={photo.src} alt={photo.title} />
+        <img src={src} alt={title} />
       </div>
       <div className={styles.datails}>
         <div>
           <p>
-            <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
+            <Link to={`/perfil/${author}`}>@{author}</Link>
             <span className={styles.views}></span>
           </p>
           <h1 className="title">
-            <Link to={`/foto/${photo.id}`}>{photo.title}</Link>
+            <Link to={`/foto/${id}`}>{title}</Link>
           </h1>
           <ul className={styles.attributes}>
-            <li>{photo.peso}</li>
-            <li>{photo.idade}</li>
-            <li>{photo.peso}</li>
+            <li>{peso} kg</li>
+            <li>{idade == 1 ? idade + ' ano' : idade + ' anos'}</li>
           </ul>
         </div>
       </div>

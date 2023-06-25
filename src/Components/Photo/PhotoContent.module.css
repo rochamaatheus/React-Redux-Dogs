@@ -45,6 +45,7 @@
 
 .author {
   opacity: 0.5;
+  padding-right: 2rem;
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;

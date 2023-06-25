@@ -1,7 +1,7 @@
 import React from 'react';
 
-const PhotoComments = () => {
-  return <div>PhotoComments</div>;
+const PhotoComments = ({ id, comments }) => {
+  return <div></div>;
 };
 
 export default PhotoComments;

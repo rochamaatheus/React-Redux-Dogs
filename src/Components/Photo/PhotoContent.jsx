@@ -5,18 +5,18 @@ import PhotoComments from './PhotoComments';
 
 const PhotoContent = ({ data }) => {
   const { photo, comments } = data;
-  const { src, title, author, id, peso, idade } = photo;
+  const { src, title, author, id, peso, idade, acessos } = photo;
 
   return (
     <div className={styles.photo}>
       <div className={styles.img}>
         <img src={src} alt={title} />
       </div>
-      <div className={styles.datails}>
+      <div className={styles.details}>
         <div>
           <p className={styles.author}>
             <Link to={`/perfil/${author}`}>@{author}</Link>
-            <span className={styles.views}></span>
+            <span className={styles.views}>{acessos}</span>
           </p>
           <h1 className="title">
             <Link to={`/foto/${id}`}>{title}</Link>

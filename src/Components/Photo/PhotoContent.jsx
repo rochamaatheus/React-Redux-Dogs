@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './PhotoContent.module.css';
 import { Link } from 'react-router-dom';
 import PhotoComments from './PhotoComments';
+import FormattedNumber from '../Helper/FormattedNumber';
 
 const PhotoContent = ({ data }) => {
   const { photo, comments } = data;
@@ -16,7 +17,9 @@ const PhotoContent = ({ data }) => {
         <div>
           <p className={styles.author}>
             <Link to={`/perfil/${author}`}>@{author}</Link>
-            <span className={styles.views}>{acessos}</span>
+            <span className={styles.views}>
+              <FormattedNumber number={acessos} />
+            </span>
           </p>
           <h1 className="title">
             <Link to={`/foto/${id}`}>{title}</Link>

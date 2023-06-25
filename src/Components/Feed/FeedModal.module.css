@@ -9,3 +9,9 @@
   z-index: 1000;
   padding: 2rem calc(4rem + 15px);
 }
+
+@media (max-width: 40rem) {
+  .modal {
+    padding: 2rem calc(2rem + 15px);
+  }
+}

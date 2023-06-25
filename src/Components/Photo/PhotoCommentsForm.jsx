@@ -3,7 +3,7 @@ import { ReactComponent as Enviar } from '../../Assets/enviar.svg';
 import useFetch from '../../Hooks/useFetch';
 import { COMMENT_POST } from '../../api';
 
-const PhotoCommentsForm = ({ id }) => {
+const PhotoCommentsForm = ({ id, setComments }) => {
   const [comment, setComment] = React.useState('');
   const { request, error } = useFetch();
 
@@ -12,7 +12,11 @@ const PhotoCommentsForm = ({ id }) => {
     const token = window.localStorage.getItem('token');
     if (!token) return;
     const { url, options } = COMMENT_POST(id, { comment }, token);
-    await request(url, options);
+    const { response, json } = await request(url, options);
+    if (response.ok) {
+      setComment('');
+      setComments((comments) => [...comments, json]);
+    }
   }
 
   return (

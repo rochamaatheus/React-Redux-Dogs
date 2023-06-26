@@ -20,9 +20,17 @@ const PhotoDelete = ({ id }) => {
   }
 
   return (
-    <button onClick={handleClick} className={styles.delete}>
-      Deletar
-    </button>
+    <>
+      {loading ? (
+        <button disabled className={styles.delete}>
+          Deletar
+        </button>
+      ) : (
+        <button onClick={handleClick} className={styles.delete}>
+          Deletar
+        </button>
+      )}
+    </>
   );
 };
 

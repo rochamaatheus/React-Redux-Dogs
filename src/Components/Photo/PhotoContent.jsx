@@ -5,6 +5,7 @@ import PhotoComments from './PhotoComments';
 import FormattedNumber from '../Helper/FormattedNumber';
 import UserContext from '../../UserContext';
 import PhotoDelete from './PhotoDelete';
+import Image from '../Helper/Image';
 
 const PhotoContent = ({ data }) => {
   const user = React.useContext(UserContext);
@@ -14,7 +15,7 @@ const PhotoContent = ({ data }) => {
   return (
     <div className={styles.photo}>
       <div className={styles.img}>
-        <img src={src} alt={title} />
+        <Image src={src} alt={title} />
       </div>
       <div className={styles.details}>
         <div>

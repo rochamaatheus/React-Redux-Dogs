@@ -2,6 +2,27 @@ import React from 'react';
 import styles from './Loading.module.css';
 
 const Loading = () => {
+  const [step, setStep] = React.useState(0);
+
+  React.useEffect(() => {
+    function updateStep() {
+      setStep((n) => {
+        if (step < 3) return n + 1;
+        else return 0;
+      });
+    }
+    const interval = setInterval(updateStep, 300);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [step]);
+
+  function displayStep(n) {
+    return {
+      display: step === n ? 'block' : 'none',
+    };
+  }
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.loading}>

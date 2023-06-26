@@ -6,12 +6,12 @@ import useFetch from '../../Hooks/useFetch';
 const PhotoDelete = ({ id }) => {
   const { loading, request } = useFetch();
 
-  async function handleClick(event) {
-    event.preventDefault();
+  async function handleClick() {
     const token = window.localStorage.getItem('token');
     if (!token) return;
     const { url, options } = PHOTO_DELETE(id, token);
-    request(url, options);
+    const { response } = await request(url, options);
+    if (response.ok) window.location.reload();
   }
 
   return (

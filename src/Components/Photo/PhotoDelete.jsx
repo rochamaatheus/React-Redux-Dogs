@@ -1,13 +1,17 @@
 import React from 'react';
 import styles from './PhotoDelete.module.css';
 import { PHOTO_DELETE } from '../../api';
+import useFetch from '../../Hooks/useFetch';
 
 const PhotoDelete = ({ id }) => {
-  function handleClick(event) {
+  const { loading, request } = useFetch();
+
+  async function handleClick(event) {
     event.preventDefault();
     const token = window.localStorage.getItem('token');
     if (!token) return;
     const { url, options } = PHOTO_DELETE(id, token);
+    request(url, options);
   }
 
   return (

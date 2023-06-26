@@ -7,11 +7,16 @@ const PhotoDelete = ({ id }) => {
   const { loading, request } = useFetch();
 
   async function handleClick() {
-    const token = window.localStorage.getItem('token');
-    if (!token) return;
-    const { url, options } = PHOTO_DELETE(id, token);
-    const { response } = await request(url, options);
-    if (response.ok) window.location.reload();
+    const confirm = window.confirm(
+      'Você está prestes a excluir uma postagem sua.'
+    );
+    if (confirm) {
+      const token = window.localStorage.getItem('token');
+      if (!token) return;
+      const { url, options } = PHOTO_DELETE(id, token);
+      const { response } = await request(url, options);
+      if (response.ok) window.location.reload();
+    }
   }
 
   return (

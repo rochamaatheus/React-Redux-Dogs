@@ -40,3 +40,17 @@
   fill: #fea;
   stroke: #fb1;
 }
+
+.button:focus svg g,
+.button:hover svg g {
+  animation: latir 0.6s infinite;
+}
+
+@keyframes latir {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

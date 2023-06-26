@@ -3,8 +3,11 @@ import styles from './PhotoContent.module.css';
 import { Link } from 'react-router-dom';
 import PhotoComments from './PhotoComments';
 import FormattedNumber from '../Helper/FormattedNumber';
+import UserContext from '../../UserContext';
+import PhotoDelete from './PhotoDelete';
 
 const PhotoContent = ({ data }) => {
+  const user = React.useContext(UserContext);
   const { photo, comments } = data;
   const { src, title, author, id, peso, idade, acessos } = photo;
 
@@ -16,7 +19,11 @@ const PhotoContent = ({ data }) => {
       <div className={styles.details}>
         <div>
           <p className={styles.author}>
-            <Link to={`/perfil/${author}`}>@{author}</Link>
+            {user.data && user.data.username === photo.author ? (
+              <PhotoDelete id={photo.id} />
+            ) : (
+              <Link to={`/perfil/${author}`}>@{author}</Link>
+            )}
             <span className={styles.views}>
               <FormattedNumber number={acessos} />
             </span>

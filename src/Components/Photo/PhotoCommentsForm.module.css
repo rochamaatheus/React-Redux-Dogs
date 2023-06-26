@@ -34,3 +34,9 @@
   padding: 0 1rem;
   overflow: hidden;
 }
+
+.button:focus svg path,
+.button:hover svg path {
+  fill: #fea;
+  stroke: #fb1;
+}

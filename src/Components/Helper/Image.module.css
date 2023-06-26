@@ -18,3 +18,12 @@
   background-size: 200%;
   animation: skeleton 1.5s infinite linear;
 }
+
+@keyframes skeleton {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -200%;
+  }
+}

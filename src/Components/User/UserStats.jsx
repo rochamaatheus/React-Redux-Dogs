@@ -1,7 +1,16 @@
 import React from 'react';
 import Head from '../Helper/Head';
+import useFetch from '../../Hooks/useFetch';
 
 const UserStats = () => {
+  const { data, error, loading, request } = useFetch();
+
+  React.useEffect(() => {
+    async function getData() {
+      const { url, options } = {};
+    }
+  }, []);
+
   return (
     <div>
       <Head

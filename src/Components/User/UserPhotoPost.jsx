@@ -7,6 +7,7 @@ import useFetch from '../../Hooks/useFetch';
 import { PHOTO_POST } from '../../api';
 import Error from '../Helper/Error';
 import { useNavigate } from 'react-router-dom';
+import Head from '../Helper/Head';
 
 const UserPhotoPost = () => {
   const nome = useForm();
@@ -43,6 +44,10 @@ const UserPhotoPost = () => {
 
   return (
     <section className={`${styles.photoPost} animeLeft`}>
+      <Head
+        title="Postar"
+        description="Compartilhe suas melhores fotos de cachorros e conecte-se com outros amantes de cães em nossa página de postagem. Junte-se a uma comunidade dedicada a celebrar a beleza, a diversão e o amor dos cães. Compartilhe histórias, dicas e momentos especiais com esses incríveis companheiros."
+      />
       <form onSubmit={handleSubmit}>
         <Input label="Nome" type="text" name="nome" {...nome} />
         <Input label="Peso" type="number" name="peso" {...peso} />

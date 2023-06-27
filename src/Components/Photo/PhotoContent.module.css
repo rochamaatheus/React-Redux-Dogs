@@ -28,6 +28,10 @@
   padding: 2rem 2rem 0 2rem;
 }
 
+.single .details {
+  padding: 2rem 0 0 0;
+}
+
 .img {
   grid-row: 1/4;
 }

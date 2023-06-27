@@ -21,6 +21,7 @@
 
 .single.photo {
   grid-template-columns: 1fr;
+  height: auto;
 }
 
 .details {

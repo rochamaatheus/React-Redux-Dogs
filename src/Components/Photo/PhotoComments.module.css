@@ -26,6 +26,12 @@
   height: 10rem;
 }
 
+@media (max-width: 64rem) {
+  .comments {
+    height: 7rem;
+  }
+}
+
 .comments li {
   margin-bottom: 0.5rem;
   line-height: 1.2;

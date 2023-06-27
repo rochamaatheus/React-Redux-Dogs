@@ -19,6 +19,10 @@
   }
 }
 
+.single.photo {
+  grid-template-columns: 1fr;
+}
+
 .details {
   padding: 2rem 2rem 0 2rem;
 }

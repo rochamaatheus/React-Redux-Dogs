@@ -10,6 +10,7 @@ import User from './Components/User/User';
 import ProtectedRoute from './Components/Helper/ProtectedRoute';
 import Photo from './Components/Photo/Photo';
 import Error404 from './Components/Error404';
+import UserProfile from './Components/User/UserProfile';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             />
             <Route path="foto/:id" element={<Photo />} />
             <Route path="*" element={<Error404 />} />
+            <Route path="perfil/:user" element={<UserProfile />} />
           </Routes>
           <Footer />
         </UserStorage>

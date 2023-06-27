@@ -30,8 +30,8 @@ function App() {
               }
             />
             <Route path="foto/:id" element={<Photo />} />
-            <Route path="*" element={<Error404 />} />
             <Route path="perfil/:user" element={<UserProfile />} />
+            <Route path="*" element={<Error404 />} />
           </Routes>
           <Footer />
         </UserStorage>

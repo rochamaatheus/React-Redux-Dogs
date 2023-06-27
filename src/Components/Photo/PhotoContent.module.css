@@ -19,12 +19,27 @@
   }
 }
 
+.single.photo {
+  grid-template-columns: 1fr;
+  height: auto;
+}
+
 .details {
   padding: 2rem 2rem 0 2rem;
 }
 
+.single .details {
+  padding: 1rem 0 0 0;
+}
+
 .img {
   grid-row: 1/4;
+}
+
+.single .img {
+  grid-row: 1;
+  border-radius: 0.4rem;
+  overflow: hidden;
 }
 
 .comments {
@@ -34,9 +49,9 @@
 @media (max-width: 64rem) {
   .photo {
     height: auto;
-    max-height: calc(100vh - 4rem);
+    max-height: calc(100vh - 5rem);
     overflow-y: auto;
-    grid-template-columns: minmax(20rem, 40rem);
+    grid-template-columns: minmax(20rem, 36rem);
   }
   .img {
     grid-row: 1;

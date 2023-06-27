@@ -29,7 +29,7 @@
 }
 
 .single .details {
-  padding: 2rem 0 0 0;
+  padding: 1rem 0 0 0;
 }
 
 .img {
@@ -38,6 +38,8 @@
 
 .single .img {
   grid-row: 1;
+  border-radius: 0.4rem;
+  overflow: hidden;
 }
 
 .comments {

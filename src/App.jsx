@@ -27,7 +27,7 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route path="foto/*" element={<Photo />} />
+            <Route path="foto/:id" element={<Photo />} />
           </Routes>
           <Footer />
         </UserStorage>

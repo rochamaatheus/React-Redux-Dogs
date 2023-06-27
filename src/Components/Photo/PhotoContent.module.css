@@ -31,6 +31,10 @@
   grid-row: 1/4;
 }
 
+.single .img {
+  grid-row: 1;
+}
+
 .comments {
   padding: 0 2rem;
 }

@@ -1,15 +1,19 @@
 import React from 'react';
 import Head from '../Helper/Head';
 import useFetch from '../../Hooks/useFetch';
+import { GET_STATS } from '../../api';
 
 const UserStats = () => {
   const { data, error, loading, request } = useFetch();
 
   React.useEffect(() => {
     async function getData() {
-      const { url, options } = {};
+      const token = window.localStorage.getItem('token');
+      if (!token) return;
+      const { url, options } = GET_STATS(token);
+      await request(url, options);
     }
-  }, []);
+  }, [request]);
 
   return (
     <div>

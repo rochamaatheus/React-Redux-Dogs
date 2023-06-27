@@ -23,6 +23,7 @@
 
 .single.comments {
   padding: 0;
+  height: 10rem;
 }
 
 .comments li {

@@ -13,7 +13,7 @@ const PhotoContent = ({ data, single }) => {
   const { src, title, author, id, peso, idade, acessos } = photo;
 
   return (
-    <div className={`${styles.photo} ${single && styles.single}`}>
+    <div className={`${styles.photo} ${single ? styles.single : ''}`}>
       <div className={styles.img}>
         <Image src={src} alt={title} />
       </div>

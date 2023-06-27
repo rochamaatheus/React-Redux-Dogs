@@ -6,6 +6,7 @@ import useForm from '../../Hooks/useForm';
 import { USER_POST } from '../../api';
 import { UserContext } from '../../UserContext';
 import useFetch from '../../Hooks/useFetch';
+import Head from '../Helper/Head';
 
 const LoginCreate = () => {
   const username = useForm();
@@ -28,6 +29,10 @@ const LoginCreate = () => {
 
   return (
     <section className="animeLeft">
+      <Head
+        title="Criar Conta"
+        description="Se você é um amante de cachorros, esta é a comunidade perfeita para você! Crie sua conta gratuita e compartilhe as fotos mais adoráveis e engraçadas dos seus peludos. Registre-se agora e faça parte da nossa comunidade canina"
+      />
       <h1 className="title">Cadastre-se</h1>
       <form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />

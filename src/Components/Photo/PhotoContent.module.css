@@ -51,10 +51,20 @@
     height: auto;
     max-height: calc(100vh - 5rem);
     overflow-y: auto;
-    grid-template-columns: minmax(20rem, 36rem);
+    grid-template-columns: minmax(15rem, 36rem);
   }
   .img {
     grid-row: 1;
+  }
+}
+
+@media (max-width: 26.875rem) {
+  .photo {
+    max-height: calc(100vh - 8rem);
+    margin-top: 0.2rem;
+  }
+  .details {
+    font-size: 0.875rem;
   }
 }
 

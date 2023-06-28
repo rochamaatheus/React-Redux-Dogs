@@ -4,7 +4,7 @@ import useFetch from '../../Hooks/useFetch';
 import { GET_STATS } from '../../api';
 import Loading from '../Helper/Loading';
 import Error from '../Helper/Error';
-import UserStatsGraphs from './UserStatsGraphs';
+const UserStatsGraphs = React.lazy(() => import('./UserStatsGraphs'));
 
 const UserStats = () => {
   const { data, error, loading, request } = useFetch();
@@ -23,13 +23,13 @@ const UserStats = () => {
   if (error) return <Error error={error} />;
   if (data)
     return (
-      <div>
+      <React.Suspense fallback={<div></div>}>
         <Head
           title="Estatísticas"
           description="Visualize duas estatísticas-chave em nosso site por meio de dois gráficos claros. Obtenha uma visão rápida e fácil do número de usuários ativos e do engajamento do site ao longo do tempo. Acompanhe o crescimento do nosso público e veja como as interações aumentam ao longo do período. Tome decisões embasadas com base nessas informações essenciais apresentadas de forma acessível"
         />
         <UserStatsGraphs data={data} />
-      </div>
+      </React.Suspense>
     );
   else return null;
 };

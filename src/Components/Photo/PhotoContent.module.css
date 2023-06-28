@@ -58,6 +58,12 @@
   }
 }
 
+@media (max-width: 26.875rem) {
+  .photo {
+    max-height: calc(100vh - 8rem);
+  }
+}
+
 .author {
   opacity: 0.5;
   padding-right: 2rem;

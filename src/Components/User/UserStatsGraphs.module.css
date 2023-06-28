@@ -26,3 +26,9 @@
     grid-column: 1;
   }
 }
+
+@media (max-width: 21.875rem) {
+  .total {
+    font-size: 1.8rem;
+  }
+}

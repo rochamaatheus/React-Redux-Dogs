@@ -6,7 +6,7 @@ Este site é uma rede social exclusiva para amantes de cachorros. Desenvolvido c
 
 [Acesse o site](https://react-dogs-indol.vercel.app)
 
-![Logo](logo.png)
+![Logo](logo.jpg)
 
 🚀 Linguagem utilizada: React
 

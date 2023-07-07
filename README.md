@@ -1,12 +1,12 @@
 # Dogs
 
-![Site Demo](site_demo.png)
+![Capa_Site](https://i.imgur.com/4SMAvg8.png)
 
 Este site é uma rede social exclusiva para amantes de cachorros. Desenvolvido com React, ele oferece funcionalidades como login, comentários, compartilhamento de fotos e estatísticas. Com um design bonito e responsivo, proprocionando uma experiência interativa e agradável. O site integra uma API online para fornecer recursos adicionais. 
 
 [Acesse o site](https://react-dogs-indol.vercel.app)
 
-![Logo](logo.jpg)
+<img align="center" alt="Rocha-React" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg">
 
 🚀 Linguagem utilizada: React
 

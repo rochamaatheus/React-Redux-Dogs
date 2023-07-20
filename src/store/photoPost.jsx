@@ -1,4 +1,4 @@
-import { createAsyncSlice } from './helper/createAsyncSlice';
+import createAsyncSlice from './helper/createAsyncSlice';
 import { PHOTO_POST } from '../api';
 
 const slice = createAsyncSlice({

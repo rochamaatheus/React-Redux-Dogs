@@ -10,9 +10,12 @@ Este site é uma rede social exclusiva para amantes de cachorros. Desenvolvido c
 
 [Acesse o site](https://react-dogs-indol.vercel.app)
 
-<img align="center" alt="Rocha-React" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg">
+<div style-{display: 'inline-block'}>
+  <img alt="Rocha-React" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg">
+  <img alt="Rocha-Redux" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/redux/redux-original.svg">
+</div>
 
-🚀 Linguagem utilizada: React
+🚀 Linguagem utilizada: React e Redux.
 
 ---
 

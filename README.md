@@ -1,7 +1,7 @@
 # Dogs
 
 - Nota: Devido a um erro com o versionamento do GIT, este projeto se tornou o REACT-REDUX-DOGS
-- Nota 2: O original projeto apenas com o REACT foi adicionado novamente, porém sem a possibilidade de ver as mudanças com os commits.
+- Nota 2: O projeto original apenas com o REACT foi adicionado novamente, porém sem a possibilidade de ver as mudanças com os commits.
 - Projeto Original: [REACT - DOGS](https://github.com/rochamaatheus/React-Dogs)
 
 ![Capa_Site](https://i.imgur.com/4SMAvg8.png)

@@ -3,13 +3,12 @@ import styles from './PhotoContent.module.css';
 import { Link } from 'react-router-dom';
 import PhotoComments from './PhotoComments';
 import FormattedNumber from '../Helper/FormattedNumber';
-import UserContext from '../../UserContext';
 import PhotoDelete from './PhotoDelete';
 import Image from '../Helper/Image';
 import { useSelector } from 'react-redux';
 
 const PhotoContent = ({ single }) => {
-  const user = React.useContext(UserContext);
+  const { user } = useSelector((state) => state);
   const { photo, comments } = useSelector((state) => state.photo.data);
   const { src, title, author, id, peso, idade, acessos } = photo;
 

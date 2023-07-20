@@ -4,13 +4,13 @@ import { Route, Routes } from 'react-router-dom';
 import Feed from '../Feed/Feed';
 import UserPhotoPost from './UserPhotoPost';
 import UserStats from './UserStats';
-import UserContext from '../../UserContext';
 import Loading from '../Helper/Loading';
 import Error404 from '../Error404';
 import Head from '../Helper/Head';
+import { useSelector } from 'react-redux';
 
 const User = () => {
-  const { data } = React.useContext(UserContext);
+  const { data } = useSelector((state) => state.user);
 
   if (!data) return <Loading />;
   return (

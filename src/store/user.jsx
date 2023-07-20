@@ -9,7 +9,7 @@ const slice = createAsyncSlice({
 
 export const fetchUser = slice.asyncAction;
 
-const { resetState: resetUserState } = slice.actions;
+const { resetState: resetUserState, fetchError } = slice.actions;
 
 export const userLogin = (user) => async (dispatch) => {
   const { payload } = await dispatch(fetchToken(user));

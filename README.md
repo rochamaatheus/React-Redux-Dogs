@@ -1,5 +1,9 @@
 # Dogs
 
+- Nota: Devido a um erro com o versionamento do GIT, este projeto se tornou o REACT-REDUX-DOGS
+- Nota 2: O original projeto apenas com o REACT foi adicionado novamente, porém sem a possibilidade de ver as mudanças com os commits.
+- Projeto Original: [REACT - DOGS](https://github.com/rochamaatheus/React-Dogs)
+
 ![Capa_Site](https://i.imgur.com/4SMAvg8.png)
 
 Este site é uma rede social exclusiva para amantes de cachorros. Desenvolvido com React, ele oferece funcionalidades como login, comentários, compartilhamento de fotos e estatísticas. Com um design bonito e responsivo, proprocionando uma experiência interativa e agradável. O site integra uma API online para fornecer recursos adicionais. 

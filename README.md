@@ -39,6 +39,11 @@ O Redux possibilitou uma forma mais fácil de comunicação entre as propriedade
 
 - **Estatísticas de Visualização**: Os usuários têm acesso à quantidade de visualizações que suas postagens receberam. Além disso, o projeto utiliza o pacote "victory" para importar gráficos, possibilitando a exibição visual das estatísticas relacionadas às postagens.
 
+## Pré-requisitos
+
+* [Vite](https://vitejs.dev)
+* [React](https://react.dev)
+* [Redux](https://redux.js.org)
 
 ## Contato
 
